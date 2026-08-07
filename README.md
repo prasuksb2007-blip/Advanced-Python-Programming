@@ -110,3 +110,4 @@ Representative assignments by unit:
 The repository contains the following core implementation files:
 * **`libary_managment.py`**: Case study: simplified Library Management System (OOP)
 * **`dynamic_report_generator.py`**: Case study: simplified Dynamic Report Generator (OOP)
+* **`strategy_pattern_payment_processor.py`**: Case study: simplified Strategy Pattern Payment Processor.py (OOP)

@@ -1,3 +1,8 @@
+"""
+Design a dynamic report generator in Python that uses decorators, class methods, and magic methods to
+customize and format reports. The system should allow users to define report templates and apply various
+formatting options dynamically.
+"""
 # Define a decorator for formatting
 def bold_text(func):
     def wrapper(*args, **kwargs):
