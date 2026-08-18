@@ -108,6 +108,11 @@ Representative assignments by unit:
 
 ### Repository Structure
 The repository contains the following core implementation files:
+* **`basic_oop_program.py`**: Basic object-oriented programming examples
 * **`libary_managment.py`**: Case study: simplified Library Management System (OOP)
 * **`dynamic_report_generator.py`**: Case study: simplified Dynamic Report Generator (OOP)
 * **`strategy_pattern_payment_processor.py`**: Case study: simplified Strategy Pattern Payment Processor.py (OOP)
+* **`advanced_python_concept.py`**: Advanced Python concepts and implementations
+* **`design_pattern.py`**: Design pattern implementations
+* **`fibonacci_sequence.py`**: Efficient Fibonacci implementation (dynamic programming)
+* **`lcs.py`**: Longest Common Subsequence implementation

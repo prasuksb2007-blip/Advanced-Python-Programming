@@ -6,7 +6,9 @@ formatting options dynamically.
 # Define a decorator for formatting
 def bold_text(func):
     def wrapper(*args, **kwargs):
-        return f"<b>{func(*args, **kwargs)}</b>"
+        content = func(*args, **kwargs)
+        border = "=" * 40
+        return f"{border}\n{content.upper()}\n{border}"
     return wrapper
 
 
@@ -75,3 +77,15 @@ def main():
 # Run the main function
 if __name__ == "__main__":
     main()
+
+
+"""
+--> Output
+Title: Monthly Report
+Content: Sales increased this month.
+
+========================================
+TITLE: MONTHLY REPORT
+CONTENT: SALES INCREASED THIS MONTH.
+========================================
+"""

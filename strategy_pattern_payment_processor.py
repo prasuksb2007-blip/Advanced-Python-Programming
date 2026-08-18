@@ -1,4 +1,6 @@
-# Write a program to implement a Configurable Payment Processing System Using Strategy Pattern.
+"""
+Write a program to implement a Configurable Payment Processing System Using Strategy Pattern.
+"""
 # Step 1: Define a base PaymentStrategy interface using standard Python class structure
 class PaymentStrategy:
     def pay(self, amount):
@@ -69,3 +71,15 @@ if __name__ == "__main__":
     print("\n--- Transaction 3 ---")
     processor.set_strategy(bitcoin)
     processor.process_payment(300.25)
+
+"""
+--> Output
+--- Transaction 1 ---
+Paid $150.00 using Credit Card (************3456) for John Doe.
+
+--- Transaction 2 ---
+Paid $75.50 using PayPal account (john.doe@example.com).
+
+--- Transaction 3 ---
+Paid $300.25 using Bitcoin wallet (1A1zP1...vfNa).
+"""

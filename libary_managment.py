@@ -113,3 +113,9 @@ if __name__ == "__main__":
 
     library.borrow_book("P001", "B001")
     library.return_book("P001", "B001")
+
+"""
+--> Output
+Success! Alice borrowed 'Python Basics'.
+Success! Alice returned 'Python Basics'.
+"""
