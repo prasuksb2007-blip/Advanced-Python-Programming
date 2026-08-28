@@ -12,6 +12,10 @@ class Book:
         self.isbn = isbn
         self.is_borrowed = False
 
+    def __str__(self):
+        result = "Available" if not self.is_borrowed else "Borrowed"
+        return(f"The Author of {self.title} Book ISBN:{self.isbn} is {self.author} | Status: {result}")
+    
     def borrow_book(self):
         if self.is_borrowed:
             return False
@@ -104,6 +108,7 @@ class Library:
 if __name__ == "__main__":
     library = Library()
     book = Book("Python Basics", "John Doe", "B001")
+    print(book)
     patron1 = Patron("Alice", "P001")
     patron2 = Patron("Joe", "P002")
     library.add_book(book)
@@ -116,6 +121,7 @@ if __name__ == "__main__":
 
 """
 --> Output
+The Author of Python Basics Book ISBN:B001 is John Doe | Status: Available
 Success! Alice borrowed 'Python Basics'.
 Sorry, 'Python Basics' is already borrowed.
 Success! Alice returned 'Python Basics'.
