@@ -116,3 +116,7 @@ The repository contains the following core implementation files:
 * **`design_pattern.py`**: Design pattern implementations
 * **`fibonacci_sequence.py`**: Case study: Efficient Fibonacci implementation (dynamic programming)
 * **`lcs.py`**: Case study: Longest Common Subsequence implementation
+* **`0_1_knapsack.py`**: Case study: 0/1 Knapsack implementation (dynamic programming)
+* **`regex_email_extractor.py`**: Case study: Regex Email Extractor implementation
+* **`file_extraction_script.py`**: Case study: File Extraction Script implementation
+* **`csv_json_converter.py`**: Case study: CSV to JSON converter implementation
