@@ -5,40 +5,51 @@ to .json output file.
 import csv
 import json
 
-def convert_csv_to_json(csv_file_path, json_file_path):
-    data = []
-    
-    # Step 1: Open and read the CSV file using DictReader
-    with open(csv_file_path, mode='r', encoding='utf-8') as csv_file:
-        csv_reader = csv.DictReader(csv_file)
-        
-        # Step 2: Convert each row into a dictionary and add to data list
-        for row in csv_reader:
-            data.append(row)
-            
-    # Step 3: Write the dictionary data into the output JSON file
-    with open(json_file_path, mode='w', encoding='utf-8') as json_file:
-        json.dump(data, json_file, indent=4)
-        
-    print(f"Successfully converted '{csv_file_path}' to '{json_file_path}'.")
+def csv_to_json(csvFilePath, jsonFilePath):
+    jsonArray = []
 
-# Example execution
-if __name__ == "__main__":
-    csv_file = "data.csv"
-    json_file = "output.json"
-    
-    # Helper step: Create a sample CSV file if it doesn't exist
-    with open(csv_file, mode='w', newline='', encoding='utf-8') as file:
-        writer = csv.writer(file)
-        writer.writerow(["Name", "Branch", "Year", "CGPA"])
-        writer.writerow(["Nikhil", "COE", "2", "9.0"])
-        writer.writerow(["Sanchit", "COE", "2", "9.1"])
-        writer.writerow(["Aditya", "IT", "2", "9.3"])
+    with open(csvFilePath, encoding="utf-8") as csvf:
+        csvReader = csv.DictReader(csvf)
 
-    # Run conversion
-    convert_csv_to_json(csv_file, json_file)
+        for row in csvReader:
+            jsonArray.append(row)
 
+    with open(jsonFilePath, "w", encoding="utf-8") as jsonf:
+        jsonString = json.dumps(jsonArray, indent=4)
+        jsonf.write(jsonString)
+
+
+csvFilePath = "data.csv"
+jsonFilePath = "data.json"
+
+csv_to_json(csvFilePath, jsonFilePath)
+
+print("CSV file successfully converted to JSON.")
 """
 --> Output
-Successfully converted 'data.csv' to 'output.json'.
+CSV file successfully converted to JSON.
+
+[In data.json file, the output will be:]
+[
+    {
+        "a": "25",
+        "b": "84",
+        "c": "com"
+    },
+    {
+        "a": "41",
+        "b": "52",
+        "c": "org"
+    },
+    {
+        "a": "58",
+        "b": "79",
+        "c": "io"
+    },
+    {
+        "a": "93",
+        "b": "21",
+        "c": "co"
+    }
+]
 """
