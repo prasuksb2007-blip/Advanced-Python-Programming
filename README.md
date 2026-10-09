@@ -120,3 +120,4 @@ The repository contains the following core implementation files:
 * **`regex_email_extractor.py`**: Case study: Regex Email Extractor implementation
 * **`file_extraction_script.py`**: Case study: File Extraction Script implementation
 * **`csv_json_converter.py`**: Case study: CSV to JSON converter implementation
+* **`numpy_array(1-10).py`**: Case study: One-Dimensional NumPy Array implementation
